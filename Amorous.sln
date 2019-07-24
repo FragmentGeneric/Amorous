@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaledriven", "Scaledriven\Scaledriven.csproj", "{B181B04A-C807-44C2-A713-4F5980B852E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amorous", "Amorous\Amorous.csproj", "{B181B04A-C807-44C2-A713-4F5980B852E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,10 +1,6 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Scaledriven.Areas.Association.Database;
-using Scaledriven.Areas.Association.Models;
-using Scaledriven.Areas.Association.Service;
-using Scaledriven.Areas.Shared.Services;
 
 namespace Scaledriven.Areas.Association
 {
@@ -30,8 +26,6 @@ namespace Scaledriven.Areas.Association
 
         public static IServiceCollection AddAssociationContext(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddDbContext<AssociationDbContext>();
-            serviceCollection.AddTransient<IFactory<Person>, PersonFactory>();
             return serviceCollection;
         }
 

@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <RootNamespace>Scaledriven</RootNamespace>
     </PropertyGroup>
 
 
@@ -19,6 +20,7 @@
 
     <ItemGroup>
       <Folder Include="../Scaledriven.Angular/dist" />
+      <Folder Include="ApiControllers" />
       <Folder Include="wwwroot" />
     </ItemGroup>
 

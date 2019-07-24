@@ -30,16 +30,5 @@ namespace Scaledriven.Areas.Shared.Models
         [Required]
         public string Email { get; set; }
 
-        public IEnumerable<Post> Posts { get; set; }
-
-        public Post MakePost(string content)
-        {
-            return new Post
-            {
-                UserId = content
-            };
-        }
-
-
     }
 }
