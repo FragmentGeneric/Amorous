@@ -7,6 +7,46 @@
     <ItemGroup>
       <PackageReference Include="Faker.Net" Version="1.1.1" />
       <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.6" />
+      <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="AspNetCore\Application\Pages" />
+      <Folder Include="wwwroot" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Remove="wwwroot\**" CopyToOutputDirectory="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_UnmanagedRegistrationCache Remove="obj\Amorous.Core.csproj.UnmanagedRegistration.cache" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp2.2\Amorous.Core.csproj.ResolveComReference.cache" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <IntermediateAssembly Remove="obj\Debug\netcoreapp2.2\Amorous.Core.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\Amorous.Core.pdb" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp2.2\Amorous.Core.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ApplicationManifest Remove="obj\Debug\netcoreapp2.2\Native.Amorous.Core.manifest" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <DeployManifest Remove="obj\Debug\netcoreapp2.2\Amorous.Core.application" />
     </ItemGroup>
 
 </Project>

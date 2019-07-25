@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace Scaledriven.Shared.Services
+namespace Amorous.Core.Services
 {
     public class ConfigurationService
     {
