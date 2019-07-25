@@ -12,6 +12,7 @@ ___
 - SwaggerCodegen
 - docfx
 - git
+- Git-Credential-Manager
 
 
 Restore package dependencies
