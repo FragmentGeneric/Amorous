@@ -7,7 +7,7 @@ namespace Amorous.Core.DataAccess
     /// DbContexts can Optional extend ApplicationDbContext.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class ApplicationDbContext<T> : DbContext where T : ApplicationUser
+    public abstract class AbstractApplicationContext<T> : DbContext where T : ApplicationUser
     {
         /// <summary>
         /// Required field <see cref="DbSet{TEntity}"/> defines the derived DbContext
@@ -21,5 +21,21 @@ namespace Amorous.Core.DataAccess
         /// }
         /// </example>
         public virtual DbSet<T> Users { get; set; }
+
+        public AbstractApplicationContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            //
+
+            /**
+             * todo refactor: change application storagePath "App.db -> Data/App.db" via find connection string
+             */
+            optionsBuilder.UseSqlite("filename=App.db");
+        }
     }
 }

@@ -3,7 +3,7 @@ namespace Amorous.Core.Models
     /// <summary>
     /// Base model of domain application user
     /// </summary>
-    public class ApplicationUser : DomainUser
+    public abstract class ApplicationUser : DomainUser
     {
 
         /// <summary>
