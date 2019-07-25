@@ -4,13 +4,23 @@ Two projects exist within the root of this repository.
 * The Api - Scaledriven
 * The web Client - Scaledriven.Angular.csproj
 
+### Required Cli-Tools
+___
+- .Net Core
+- Docker
+- Angular Cli
+- SwaggerCodegen
+- docfx
+- git
+
+
 Restore package dependencies
 ```
-cd Scaledriven
+cd Amorous
 dotnet restore
 ```
 ```
-cd Scaledriven.Angular
+cd Amorous.Angular
 npm install
 ```
 
@@ -20,7 +30,7 @@ npm install
 
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+* **build**: Changes that affect the build system or external dependencies (example scopes: npm)
 * **ci**: Changes to our CI configuration files and scripts
 * **docs**: Documentation only changes
 * **feature**: A new feature
@@ -48,8 +58,8 @@ Download your system's docker installation from the [system installations](https
 **Images**
 
 - Api 
-    - Build  - ``docker build . -t malik393/scaledriven-api -f ./Scaledriven.Api/Dockerfile``
-    - Container - ``docker create -p 5001:5001 --name scaledriven  malik393/scaledriven``
+    - Build  - ``docker build . -t fragment-generic/amorous -f ./Amorous.App/Dockerfile``
+    - Container - ``docker create -p 5001:5001 --name amorous  fragmen-generic/amorous``
 
 
 **Downloading documentation to the environment**
@@ -72,7 +82,7 @@ mkdir External.Docs
 cd ./External.Docs
 git clone https://github.com/aspnet/AspNetCore.Docs.git AspNetCore.Docs
 git clone https://github.com/aspnet/EntityFrameworkCore.git EntityFrameworkCore
-git clone https://github.com/ngxs/store.git ngxs
+git clone https://github.com/ngrx/platform.git ngrx
 git clone https://github.com/domaindrivendev/Swashbuckle.AspNetCore.git Swashbuckle.AspNetCore
 cd ..
 ```
@@ -85,12 +95,3 @@ Keep in mind that the `External.Docs` directory can be removed from the text edi
 **Recommended Tools**
 ___
 - Jetbrains Rider
-
-**Required System Software**
-___
-- .Net Core
-- Docker
-- Angular Cli
-- SwaggerCodegen
-- docfx
-- git
