@@ -18,9 +18,9 @@ namespace Amorous.Core.AspNetCore.Application.Filers
     /// </example>
     public class SaveChangesResultFilter<U, C> : IResultFilter
     where U : ApplicationUser
-    where C : ApplicationDbContext<U>
+    where C : AbstractApplicationContext<U>
     {
-        private readonly ApplicationDbContext<U> _dbContext;
+        private readonly AbstractApplicationContext<U> _dbContext;
 
         public SaveChangesResultFilter(C dbContext)
         {

@@ -1,5 +1,9 @@
 using System.IO;
+using Amorous.Core.DataAccess;
+using Amorous.Core.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Amorous.Core.AspNetCore.Extensions
@@ -32,7 +36,9 @@ namespace Amorous.Core.AspNetCore.Extensions
         /// </summary>
         public readonly static string AssetsPath = Path.Combine(SolutionRoot, "Amorous.Core", "wwwroot");
 
-        public static IServiceCollection AddAmourousConfiguration(this IServiceCollection serviceCollection)
+        public static IServiceCollection AddAmourousConfiguration<D, U>(this IServiceCollection serviceCollection)
+            where D : AbstractApplicationContext<U>
+            where U : ApplicationUser
         {
             serviceCollection.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             serviceCollection.AddOptions();
@@ -40,6 +46,7 @@ namespace Amorous.Core.AspNetCore.Extensions
             {
                 options.RootPath = AssetsPath;
             });
+            serviceCollection.AddDbContext<D>();
             return serviceCollection;
         }
     }
