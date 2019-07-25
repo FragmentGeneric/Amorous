@@ -1,1 +1,2 @@
 todo wwwroot CopyToPublishDirectory="Always" or CopyToOutputDirectory="true"
+todo .gitignore application data "Amorous/App.db" as seen in Amorous.AspNetCore.Extensions#ConfigureServiceExtentions
