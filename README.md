@@ -1,8 +1,8 @@
 ### Getting Started
 Two projects exist within the root of this repository.
 
-* The Api - Scaledriven
-* The web Client - Scaledriven.Angular.csproj
+* The App - Amorous.App
+* The web Client - Amorous.Angular.csproj
 
 ### Required Cli-Tools
 ___
