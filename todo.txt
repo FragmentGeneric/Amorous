@@ -1,0 +1,1 @@
+todo wwwroot CopyToPublishDirectory="Always" or CopyToOutputDirectory="true"
