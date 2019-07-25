@@ -1,9 +1,11 @@
 ﻿@page
+@using Amorous.Core.AspNetCore.Extensions
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<div class="ui container">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about building Web apps with Amorous Core</p>
+    <p>@(nameof(ConfigurationServiceExtensions.AssetsPath))</p>
+    <p>Learn about building Web apps with Amorous.Core</p>
 </div>
